@@ -2,9 +2,38 @@
 <html lang="it">
 	<head>
 		<meta charset="utf-8">
+		<meta name="title" content="Curriculum vitae">
+		<meta name="description" content="Utilizzando questo sito creerai un Curriculum vitae">
+		<meta name="keywords" content="curriculum vitae cv">
+		<meta name="author" content="">
+		<meta name="copyright" content="">
+		<meta http-equiv="Reply-to" content="">
+		<meta http-equiv="content-language" content="IT">
+		<meta http-equiv="Content-Type" content="text/html; iso-8859-1">
+		<meta name="robots" content="INDEX,FOLLOW">
+		<meta name="creation_Date" content="01/31/2022">
+		<meta name="revisit-after" content="60 days">
 		<title>Curriculum Vitae</title>
 	</head>
 	<body>
 		<h1>Curriculum Vitae</h1>
+		<form name = "CV" method="post" action = "">
+			Nome: <input type="text" name="Nome" placeholder="Nome" required="">
+			Cognome: <input type="text" name="Cognome" placeholder="Cognome" required="">
+			E-Mail: <input type="text" name="E-Mail" placeholder="E-Mail" required="">
+			Telefono: <input type="text" name="Prefisso" placeholder="Prefisso" required="" maxlength="3"> <input type="text" name="Cell" placeholder="Cell" required="">
+			Genere<select name = "Genere">
+				<option>Uomo</option>
+				<option>Donna</option>
+				<option>Altro</option>
+			</select>
+			Cap <input type="text" name="Cap" placeholder="Cap" required=""> Città: <input type="text" name="Città" placeholder="Città" required="">
+			Indirizzo: <input type="text" name="Indirizzo" placeholder="Indirizzo" required="">
+			Data di nascita: <input type="date" name="Data di nascita" placeholder="Data di nascita" required="">
+
+			<label for="img">Select image:</label>
+  <input type="file" id="img" name="img" accept="image/*">
+  <input type="submit">
+		</form>
 	</body>
 </html>
