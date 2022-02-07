@@ -15,18 +15,33 @@
 	<body>
 		<h1>Curriculum Vitae</h1>
 		<form name = "CV" method="post" action = "">
-			Nome:<br> <input type="text" name="Nome" placeholder="Nome" required=""><br>
-			Cognome:<br> <input type="text" name="Cognome" placeholder="Cognome" required=""><br>
-			E-Mail:<br> <input type="text" name="E-Mail" placeholder="E-Mail" required=""><br>
-			Telefono:<br> <input type="text" name="Prefisso" placeholder="Prefisso" required="" maxlength="3"> <input type="text" name="Cell" placeholder="Cell" required=""><br>
-			Genere<br><select name = "Genere">
+			<label for="nome">Nome</label>
+			<input type="text" name="nome" id="nome" placeholder="Nome" required=""><br>
+
+			<label for="cognome">Cognome</label>
+			<input type="text" name="cognome" id="cognome" placeholder="Cognome" required=""><br>
+
+			<label for="email">E-Mail:</label>
+			<input type="text" name="email" id='email' placeholder="E-Mail" required=""><br>
+
+			Telefono:<br> <input type="text" name="prefisso" id="prefisso"  placeholder="prefisso" required="" maxlength="3"> <input type="text" name="Cell" placeholder="Cell" required=""><br>
+
+			<label for="genere"></label>
+			<select name="genere" id="genere">
 				<option>Maschio</option>
 				<option>Femmina</option>
 				<option>Altro</option>
 			</select><br>
-			Cap:<br> <input type="text" name="Cap" placeholder="Cap" required=""> Città: <input type="text" name="Città" placeholder="Città" required=""><br>
-			Indirizzo:<br> <input type="text" name="Indirizzo" placeholder="Indirizzo" required=""><br>
-			Data di nascita:<br> <input type="date" name="Data di nascita" placeholder="Data di nascita" required=""><br>
+
+			<label for="indirizzo">Indirizzo</label>
+			<input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" required=""><br>
+			<label for="cap">CAP</label>
+			<input type="text" name="cap" id="cap" required="">
+			<label for="citta">Città</label>
+			<input type="text" name="citta" id="citta" placeholder="Città" required=""><br>
+
+			<label for="datanascita">Data di nascita</label>
+			<input type="date" name="datanascita" id="datanascita" placeholder="Data di nascita" required=""><br>
 
 			<label for="img">Select image:</label>
 			<input type="file" id="img" name="img" accept="image/*">
