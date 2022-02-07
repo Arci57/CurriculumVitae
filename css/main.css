@@ -3,12 +3,16 @@ body {
 	margin: 0;
 }
 
-.title {
+input {
+	padding: 8px;
+}
 
+.title {
+	text-align: center;
 }
 
 .form {
-	max-width: 600px;
+	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 }
