@@ -1,10 +1,24 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'Roboto';
 	margin: 0;
 }
 
-input {
+div {
+	margin: 0;
+}
+
+.textfield {
 	padding: 8px;
+	width: 100%;
+  	border: 2px solid #AAAAAA;
+	border-radius: 6px;
+}
+
+.select {
 }
 
 .title {
@@ -15,4 +29,18 @@ input {
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
+	display: flex;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-top: 16px;
 }

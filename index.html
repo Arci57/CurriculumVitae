@@ -27,39 +27,65 @@
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<form name="CV" method="POST" action = "">
-				<label for="nome">Nome</label>
-				<input type="text" name="nome" id="nome" placeholder="Nome" required=""><br>
+				<div class="row">
+					<div class="column">
+						<label for="nome">Nome:</label>
+						<input class="textfield" type="text" name="nome" id="nome" placeholder="Nome" required="">
+					</div>
 
-				<label for="cognome">Cognome</label>
-				<input type="text" name="cognome" id="cognome" placeholder="Cognome" required=""><br>
+					<div class="column">
+						<label for="cognome">Cognome:</label>
+						<input class="textfield" type="text" name="cognome" id="cognome" placeholder="Cognome" required="">
+					</div>
+				</div>
 
-				<label for="email">E-Mail:</label>
-				<input type="email" name="email" id='email' placeholder="E-Mail" required=""><br>
+				<div class="row">
+					<div class="column">
+						<label for="email">E-Mail:</label>
+						<input class="textfield" type="email" name="email" id='email' placeholder="E-Mail" required="">
+					</div>
 
-				Telefono:<br>
-				<input type="tel" name="prefisso" id="prefisso"  placeholder="prefisso" required="" maxlength="3">
-				<input type="text" name="Cell" placeholder="Cell" required=""><br>
+					<div class="column">
+						<label for="cell">Cellulare:</label>
+						<input class="textfield" type="text" name="cell" id='cell' placeholder="cell" required="">
+					</div>
+				</div>
 
-				<label for="genere"></label>
-				<select name="genere" id="genere">
-					<option>Maschio</option>
-					<option>Femmina</option>
-					<option>Altro</option>
-				</select><br>
+				<div class="row">
+					<label for="genere">Genere:</label>
+					<select class="textfield" name="genere" id="genere">
+						<option>Maschio</option>
+						<option>Femmina</option>
+						<option>Altro</option>
+					</select>
+				</div>
 
-				<label for="indirizzo">Indirizzo</label>
-				<input type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" required=""><br>
-				<label for="cap">CAP</label>
-				<input type="text" name="cap" id="cap" required="">
-				<label for="citta">Città</label>
-				<input type="text" name="citta" id="citta" placeholder="Città" required=""><br>
 
-				<label for="datanascita">Data di nascita</label>
-				<input type="date" name="datanascita" id="datanascita" placeholder="Data di nascita" required=""><br>
+				<div class="row">
+					<label for="indirizzo">Indirizzo:</label>
+					<input class="textfield" type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" required="">
+				</div>
+				<div class="row">
+					<div class="column">
+						<label for="cap">CAP:</label>
+						<input class="textfield" type="text" name="cap" id="cap" required="">
+					</div>
+					<div class="column">
+						<label for="citta">Città:</label>
+						<input class="textfield" type="text" name="citta" id="citta" placeholder="Città" required="">
+					</div>
+				</div>
 
-				<label for="img">Select image:</label>
-				<input type="file" id="img" name="img" accept="image/*">
-				<input type="submit">
+				<div class="row">
+					<label for="datanascita">Data di nascita:</label>
+					<input class="textfield" type="date" name="datanascita" id="datanascita" placeholder="Data di nascita" required="">
+				</div>
+
+				<div class="row">
+					<label for="img">Select image:</label>
+					<input class="textfield" type="file" id="img" name="img" accept="image/*">
+				</div>
+				<input class="submit" type="submit">
 			</form>
 		</div>
 	</body>
