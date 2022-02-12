@@ -7,29 +7,42 @@ body {
 	margin: 0;
 }
 
-div {
-	margin: 0;
-}
-
-.textfield {
-	padding: 8px;
-	width: 100%;
-  	border: 2px solid #AAAAAA;
-	border-radius: 6px;
-}
-
-.select {
+form {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .title {
 	text-align: center;
 }
 
+.textfield {
+	padding: 8px;
+	width: 100%;
+  	border: 2px solid #AAAAAA;
+	border-radius: 8px;
+}
+
+.select {
+	padding: 8px;
+	width: 100%;
+	background-color: #EEEEEE;
+  	border: 2px solid #AAAAAA;
+	border-radius: 8px;
+	transition: 0.2s;
+}
+
+.select:hover {
+	background-color: #DDDDDD;
+}
+
 .form {
+	padding: 20px;
 	max-width: 700px;
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
+	box-sizing: border-box;
 }
 
 .column {
@@ -38,9 +51,15 @@ div {
   padding: 8px;
 }
 
+.column-single {
+  padding: 8px;
+}
+
 .row:after {
   content: "";
   display: table;
   clear: both;
   margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
