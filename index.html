@@ -19,7 +19,7 @@
 		<link rel='stylesheet' type='text/css' href="css/main.css">
 
 		<!-- JS -->
-		<script src="js/main.js"></script>
+		<script defer src="js/main.js"></script>
 
 		<!-- Roboto -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,11 +134,15 @@
 						<div class="column-single">
 							<label for="img">Seleziona un'immagine</label>
 							<input class="textfield" type="file" id="img" name="img" accept="image/*">
-							<input class="submit right" type="submit">
+							<input class="submit right" type="submit" onclick="checkData()">
 						</div>
 					</div>
 				</div>
 			</form>
+			<button class="submit right" onclick="checkFirstData()">ddsanjsa</button>
+
 		</div>
+
+
 	</body>
 </html>

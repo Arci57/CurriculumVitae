@@ -1,3 +1,5 @@
+var nome = document.getElementById("nome").value
+
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -16,77 +18,64 @@ function cognome(){
 	var value = document.getElementById("cognome").value
 
 	if (value == null || value.isempty()) {
-		return false;
-	}
-	else {
-		return true;
+		return "cognome";
 	}
 }
 
 
-function nome(){
-	var value = document.getElementById("nome").value
 
-	if (value == null || value.isempty()) {
-		return false;
+
+
+function Nome(){
+	
+	if (nome == null || nome.equals("")) {
+		return "prova"
+	}else{
+		return "ok"
 	}
-	else {
-		return true;
-	}
+
 }
 
 function cellulare(){
 	var value = document.getElementById("cellulare").value
 
-	if (value.matches("^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$")) {
-		return true;
+	if (!value.matches("^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$")) {
+		return "cellulare";
 	}
-	else {
-		return false;
-	}
+
 }
 
 function mail(){
 	var value = document.getElementById("email").value
 
-	if (value.matches("^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")) {
-		return true;
-	}
-	else {
-		return false;
+	if (!value.matches("^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")) {
+		return "e-mail";
 	}
 }
 
 function cap(){
 	var cap = document.getElementById("cap").value
 
-	if (value.matches("^[0-9]{5}$")) {
-		return true;
+	if (!value.matches("^[0-9]{5}$")) {
+		return "CAP";
 	}
-	else {
-		return false;
-	}
-}
 
-function prefisso(){
-	var value = document.getElementById("prefisso").value
-
-	if (value.matches("^\+[0-9]{1,3}$")) {
-		return true;
-	}
-	else {
-		return false;
-	}
 }
 
 function cellulare(){
 	var value = document.getElementById("prefisso").value
 
 	if (value.matches("^\+[0-9]{1,5}$")) {
-		return true;
+		return "cellulare";
 	}
-	else {
-		return false;
-	}
+
 }
 
+function checkFirstData(){
+
+	let message ="";
+
+	message+=Nome();
+
+	alert(message);
+}
