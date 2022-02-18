@@ -1,4 +1,5 @@
-var nome = document.getElementById("nome").value
+var value;
+var re;
 
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
@@ -14,21 +15,26 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-function cognome(){
-	var value = document.getElementById("cognome").value
+function Cognome(){
+	value = document.getElementById("cognome").value
 
-	if (value == null || value.isempty()) {
+	if (value == null || value == ("")) {
 		return "cognome";
 	}
 }
 
+function Indirizzo(){
+	value = document.getElementById("indirizzo").value
 
-
-
+	if (value == null || value == ("")) {
+		return "indirizzo";
+	}
+}
 
 function Nome(){
+	value = document.getElementById("nome").value
 	
-	if (nome == null || nome.equals("")) {
+	if (value == null || value == ("")) {
 		return "prova"
 	}else{
 		return "ok"
@@ -36,46 +42,47 @@ function Nome(){
 
 }
 
-function cellulare(){
-	var value = document.getElementById("cellulare").value
+function Cellulare(){
+	value = document.getElementById("cell").value
+	re = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 
-	if (!value.matches("^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$")) {
+	if (!re.exec(value)) {
 		return "cellulare";
 	}
 
 }
 
-function mail(){
-	var value = document.getElementById("email").value
+function Mail(){
+	value = document.getElementById("email").value
+	re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
 
-	if (!value.matches("^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$")) {
+	if (!re.exec(value)) {
 		return "e-mail";
 	}
 }
 
-function cap(){
-	var cap = document.getElementById("cap").value
+function Cap(){
+	cap = document.getElementById("cap").value
+	re = /^[0-9]{5}$/
 
-	if (!value.matches("^[0-9]{5}$")) {
+	if (re.exec(cap)) {
 		return "CAP";
 	}
 
 }
 
-function cellulare(){
-	var value = document.getElementById("prefisso").value
-
-	if (value.matches("^\+[0-9]{1,5}$")) {
-		return "cellulare";
-	}
-
-}
 
 function checkFirstData(){
 
 	let message ="";
 
-	message+=Nome();
+	message+=Nome() + "/n";
+	message+=Cognome()+ "/n";
+	message+=Cellulare()+ "/n";
+	message+=Mail()+ "/n";
+	message+=Indirizzo()+ "/n";
+	message+=Cap();
+	
 
 	alert(message);
 }
