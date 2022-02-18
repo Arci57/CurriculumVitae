@@ -19,7 +19,9 @@ function Cognome(){
 	value = document.getElementById("cognome").value
 
 	if (value == null || value == ("")) {
-		return "cognome";
+		return 'Cognome';
+	}else{
+		return "";
 	}
 }
 
@@ -27,7 +29,9 @@ function Indirizzo(){
 	value = document.getElementById("indirizzo").value
 
 	if (value == null || value == ("")) {
-		return "indirizzo";
+		return 'Indirizzo';
+	}else{
+		return "";
 	}
 }
 
@@ -35,9 +39,9 @@ function Nome(){
 	value = document.getElementById("nome").value
 	
 	if (value == null || value == ("")) {
-		return "prova"
+		return 'Nome';
 	}else{
-		return "ok"
+		return "";
 	}
 
 }
@@ -47,7 +51,9 @@ function Cellulare(){
 	re = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
 
 	if (!re.exec(value)) {
-		return "cellulare";
+		return 'Cellulare';
+	}else{
+		return "";
 	}
 
 }
@@ -57,16 +63,20 @@ function Mail(){
 	re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
 
 	if (!re.exec(value)) {
-		return "e-mail";
+		return 'E-mail';
+	}else{
+		return "";
 	}
 }
 
 function Cap(){
-	cap = document.getElementById("cap").value
+	value = document.getElementById("cap").value
 	re = /^[0-9]{5}$/
 
-	if (re.exec(cap)) {
-		return "CAP";
+	if (!re.exec(value)) {
+		return 'Cap';
+	}else{
+		return "";
 	}
 
 }
@@ -74,15 +84,62 @@ function Cap(){
 
 function checkFirstData(){
 
-	let message ="";
+	let message = []
 
-	message+=Nome() + "/n";
-	message+=Cognome()+ "/n";
-	message+=Cellulare()+ "/n";
-	message+=Mail()+ "/n";
-	message+=Indirizzo()+ "/n";
-	message+=Cap();
-	
+	var er = "Problema nel: "
 
-	alert(message);
+	if(Nome() != ""){
+		message.push(er + Nome())
+	}
+	if(Cognome() != ""){
+		message.push(er + Cognome())
+	}
+	if(Cellulare() != ""){
+		message.push(er + Cellulare())
+	}
+	if(Cap() != ""){
+		message.push(er + Cap())
+	}
+	if(Indirizzo() != ""){
+		message.push(er + Indirizzo())
+	}
+
+	if(message.length != 0){
+	alert(message.join('\n'))
+	}
 }
+
+function checkSecondData(){
+
+	let message = []
+
+	var er = "Problema nel: "
+
+	if(Nome() != ""){
+		message.push(er + Nome())
+	}
+	if(Cognome() != ""){
+		message.push(er + Cognome())
+	}
+	if(Cellulare() != ""){
+		message.push(er + Cellulare())
+	}
+	if(Cap() != ""){
+		message.push(er + Cap())
+	}
+	if(Indirizzo() != ""){
+		message.push(er + Indirizzo())
+	}
+
+	if(message.length != 0){
+	alert(message.join('\n'))
+	}else{
+		GeneratePdf();
+	}
+}
+
+function GeneratePdf() {
+	var element = document.getElementById('form-print');
+	html2pdf(element);
+}
+
