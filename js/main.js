@@ -106,6 +106,8 @@ function checkFirstData(){
 
 	if(message.length != 0){
 	alert(message.join('\n'))
+	}else{
+		openTab(event, 'Second')
 	}
 }
 
@@ -132,14 +134,7 @@ function checkSecondData(){
 	}
 
 	if(message.length != 0){
-	alert(message.join('\n'))
-	}else{
-		GeneratePdf();
+	return true;
 	}
-}
-
-function GeneratePdf() {
-	var element = document.getElementById('form-print');
-	html2pdf(element);
 }
 
