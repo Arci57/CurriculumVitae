@@ -81,6 +81,17 @@ function Cap(){
 
 }
 
+function Calendar(){
+	value = document.getElementById("datanascita").value
+
+
+	if(value == ""){
+		return "Calendario"
+	}else{
+		return ""
+	}
+}
+
 
 function checkFirstData(){
 
@@ -103,13 +114,20 @@ function checkFirstData(){
 	if(Indirizzo() != ""){
 		message.push(er + Indirizzo())
 	}
+	if(Mail() != ""){
+		message.push(er + Mail())
+	}
+	if(Calendar() != ""){
+		message.push(er + Calendar())
+	}
 
 	if(message.length != 0){
 	alert(message.join('\n'))
-	}else{
+	}else{	
 		openTab(event, 'Second')
 	}
 }
+
 
 function checkSecondData(){
 
@@ -137,4 +155,3 @@ function checkSecondData(){
 	return true;
 	}
 }
-

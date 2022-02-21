@@ -3,13 +3,12 @@
 	<head>
 
 
-			<!-- Html2Pdf  -->
-			<script src=
-		"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
-				integrity=
-		"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
-				crossorigin="anonymous">
-			</script>
+		<!-- Html2Pdf  -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
+			integrity= "sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
+			crossorigin="anonymous">
+		</script>
 
 		<meta charset="utf-8">
 		<meta name="title" content="Curriculum Vitae">
@@ -46,7 +45,7 @@
 				<button class="tablinks" onclick="openTab(event, 'Third')">Immagine</button>
 			</div>
 
-			<form name="CV" method="POST" action = "php/upload.php" id="form-print">
+			<form name="CV" method="POST" id="form-print">
 				<div id="First" class="tabcontent">
 					<div class="row">
 						<div class="column">
@@ -140,7 +139,22 @@
 				</div>
 
 				<div id="Second" class="tabcontent">
-					<p>test2</p>
+					<div class="row">
+						<div class="column">
+							<label for="titolostudio">Titolo di studio:</label>
+							<select class="select" name="titolostudio" id="titolostudio">
+								<option>Terza media</option>
+								<option>Diploma</option>
+								<option>Laurea</option>
+								<option>Magistrale</option>
+							</select>
+						</div>
+						<div class="column">
+							<label for="professione">Professione:</label>
+							<select class="textfield" name="professione" id="professione">
+							</select>
+						</div>
+					</div>
 					<div class="row">
 						<button class="submit left" onclick="openTab(event, 'First')">Precendente</button>
 						<button class="submit right" onclick="openTab(event, 'Third')">Prossimo</button>
@@ -165,10 +179,9 @@
 
 	</body>
 
-	<script src=
-"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity=
-"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity= "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous">
     </script>
 </html>
