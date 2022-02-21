@@ -2,12 +2,12 @@
 <html lang="it">
 	<head>
 
-		  
+
 			<!-- Html2Pdf  -->
 			<script src=
-		"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js" 
+		"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
 				integrity=
-		"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A==" 
+		"sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
 				crossorigin="anonymous">
 			</script>
 
@@ -41,8 +41,8 @@
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<div class="tab">
-				<button class="tablinks" onclick="openTab(event, 'First')" >Dati anagrafici</button>
-				<button class="tablinks" onclick="checkFirstData()">Titoli vari</button>
+				<button class="tablinks" onclick="openTab(event, 'First')">Dati anagrafici</button>
+				<button class="tablinks" onclick="openTab(event, 'Second')">Titoli vari</button>
 				<button class="tablinks" onclick="openTab(event, 'Third')">Immagine</button>
 			</div>
 
@@ -134,10 +134,17 @@
 							<input class="textfield" type="date" name="datanascita" id="datanascita" placeholder="Data di nascita" required="">
 						</div>
 					</div>
+					<div class="row">
+						<button class="submit right" onclick="openTab(event, 'Second')">Prossimo</button>
+					</div>
 				</div>
 
 				<div id="Second" class="tabcontent">
 					<p>test2</p>
+					<div class="row">
+						<button class="submit left" onclick="openTab(event, 'First')">Precendente</button>
+						<button class="submit right" onclick="openTab(event, 'Third')">Prossimo</button>
+					</div>
 				</div>
 
 				<div id="Third" class="tabcontent">
@@ -145,20 +152,23 @@
 						<div class="column-single">
 							<label for="img">Seleziona un'immagine</label>
 							<input class="textfield" type="file" id="img" name="img" accept="image/*">
-							<input class="submit right" type="submit" onclick="checkData()">
 						</div>
+					</div>
+					<div class="row">
+						<button class="submit left" onclick="openTab(event, 'Second')">Precendente</button>
+						<input class="submit right" type="submit" onclick="checkData()">
 					</div>
 				</div>
 			</form>
 
 		</div>
-s
+
 	</body>
 
 	<script src=
 "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity=
-"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
+"sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous">
     </script>
 </html>
