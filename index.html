@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 	<head>
-		<!-- Html2Pdf  -->
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
-			integrity= "sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
-			crossorigin="anonymous">
-		</script>
-
 		<meta charset="utf-8">
 		<meta name="title" content="Curriculum Vitae">
 		<meta name="description" content="Utilizzando questo sito creerai un Curriculum vitae">
@@ -34,7 +27,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 	</head>
-	<body onload="openTab(event, 'First')">
+	<body onload="openTab(event, 'Third')">
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<div class="tab">
@@ -132,7 +125,9 @@
 						</div>
 					</div>
 					<div class="row">
-						<button class="submit right" onclick="openTab(event, 'Second')">Prossimo</button>
+						<div class="column-single">
+							<button class="button right" onclick="openTab(event, 'Second')">Prossimo</button>
+						</div>
 					</div>
 				</div>
 
@@ -154,8 +149,10 @@
 						</div>
 					</div>
 					<div class="row">
-						<button class="submit left" onclick="openTab(event, 'First')">Precendente</button>
-						<button class="submit right" onclick="openTab(event, 'Third')">Prossimo</button>
+						<div class="column-single">
+							<button class="button left" onclick="openTab(event, 'First')">Precendente</button>
+							<button class="button right" onclick="openTab(event, 'Third')">Prossimo</button>
+						</div>
 					</div>
 				</div>
 
@@ -164,38 +161,31 @@
 						<div class="column-single">
 							<div class="center">
 								<div class="preview">
-									<img id="image-preview">
+									<img id="image-preview" src="img/avatar.png">
 								</div>
-								<label id="ImageLabel" for="ImageInputBtn">Upload Image</label>
-								<input type="file" id="ImageInputBtn" accept="image/*" onchange="showPreview(event);">
 							</div>
+							<label id="ImageLabel" for="ImageInputBtn">Carica una tua foto</label>
+							<input type="file" id="ImageInputBtn" accept="image/*" onchange="showPreview(event);">
 						</div>
 					</div>
 					<div class="row">
-						<button class="submit left" onclick="openTab(event, 'Second')">Precendente</button>
-						<input class="submit right" type="submit" onclick="checkData()">
+						<div class="column-single">
+							<button class="button left" onclick="openTab(event, 'Second')">Precendente</button>
+							<input class="button right" type="submit" onclick="checkData()">
+						</div>
 					</div>
 				</div>
 			</form>
 
 		</div>
-
 	</body>
-
-<script type="text/javascript">
-	function showPreview(event){
-		if(event.target.files.length > 0){
-			var src = URL.createObjectURL(event.target.files[0]);
-			var preview = document.getElementById("image-preview");
-			preview.src = src;
-			preview.style.display = "block";
+	<script type="text/javascript">
+		function showPreview(event){
+			if(event.target.files.length > 0){
+				var src = URL.createObjectURL(event.target.files[0]);
+				var preview = document.getElementById("image-preview");
+				preview.src = src;
+			}
 		}
-	}
-</script>
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity= "sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous">
-    </script>
+	</script>
 </html>
