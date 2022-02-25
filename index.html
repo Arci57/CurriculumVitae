@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 	<head>
-
-
 		<!-- Html2Pdf  -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
@@ -164,8 +162,13 @@
 				<div id="Third" class="tabcontent">
 					<div class="row">
 						<div class="column-single">
-							<label for="img">Seleziona un'immagine</label>
-							<input class="textfield" type="file" id="img" name="img" accept="image/*">
+							<div class="center">
+								<div class="preview">
+									<img id="image-preview">
+								</div>
+								<label id="ImageLabel" for="ImageInputBtn">Upload Image</label>
+								<input type="file" id="ImageInputBtn" accept="image/*" onchange="showPreview(event);">
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -178,6 +181,17 @@
 		</div>
 
 	</body>
+
+<script type="text/javascript">
+	function showPreview(event){
+		if(event.target.files.length > 0){
+			var src = URL.createObjectURL(event.target.files[0]);
+			var preview = document.getElementById("image-preview");
+			preview.src = src;
+			preview.style.display = "block";
+		}
+	}
+</script>
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
