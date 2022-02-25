@@ -27,13 +27,13 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 	</head>
-	<body onload="openTab(event, 'Third')">
+	<body onload="openTab(event, 'First')">
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
-			<div class="tab">
-				<button class="tablinks" onclick="openTab(event, 'First')">Dati anagrafici</button>
-				<button class="tablinks" onclick="openTab(event, 'Second')">Titoli vari</button>
-				<button class="tablinks" onclick="openTab(event, 'Third')">Immagine</button>
+			<div class="tab center">
+				<label class="tablinks">Dati anagrafici</label>
+				<label class="tablinks">Titoli vari</label>
+				<label class="tablinks">Immagine</label>
 			</div>
 
 			<form name="CV" method="POST" id="form-print">
@@ -87,6 +87,7 @@
 						<div class="column">
 							<label for="citta">Città:</label>
 							<select class="select" name="citta" id="citta">
+								<option>Seleziona</option>
 								<option>Ancona</option>
 								<option>Aosta</option>
 								<option>Bari</option>
@@ -136,6 +137,7 @@
 						<div class="column">
 							<label for="titolostudio">Titolo di studio:</label>
 							<select class="select" name="titolostudio" id="titolostudio">
+								<option>Seleziona</option>
 								<option>Terza media</option>
 								<option>Diploma</option>
 								<option>Laurea</option>
@@ -144,7 +146,7 @@
 						</div>
 						<div class="column">
 							<label for="professione">Professione:</label>
-							<select class="textfield" name="professione" id="professione">
+							<input class="textfield" name="professione" id="professione">
 							</select>
 						</div>
 					</div>
@@ -160,9 +162,7 @@
 					<div class="row">
 						<div class="column-single">
 							<div class="center">
-								<div class="preview">
-									<img id="image-preview" src="img/avatar.png">
-								</div>
+								<img id="image-preview" src="img/avatar.png">
 							</div>
 							<label id="ImageLabel" for="ImageInputBtn">Carica una tua foto</label>
 							<input type="file" id="ImageInputBtn" accept="image/*" onchange="showPreview(event);">
@@ -176,16 +176,6 @@
 					</div>
 				</div>
 			</form>
-
 		</div>
 	</body>
-	<script type="text/javascript">
-		function showPreview(event){
-			if(event.target.files.length > 0){
-				var src = URL.createObjectURL(event.target.files[0]);
-				var preview = document.getElementById("image-preview");
-				preview.src = src;
-			}
-		}
-	</script>
 </html>

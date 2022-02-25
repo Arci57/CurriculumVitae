@@ -2,17 +2,41 @@ var value;
 var re;
 
 function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+	var i, tabcontent, tablinks;
+	var tabSelect;
+
+	tabcontent = document.getElementsByClassName("tabcontent");
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+	document.getElementById(tabName).style.display = "block";
+
+	tablinks = document.getElementsByClassName("tablinks");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].style.background = "#eee";
+	}
+
+	if (tabName === "First") {
+		tabSelect = 1;
+	}
+	else if (tabName === "Second") {
+		tabSelect = 2;
+	}
+	else {
+		tabSelect = 3;
+	}
+
+	for (i = 0; i < tabSelect; i++) {
+		tablinks[i].style.background = "#4caf50";
+	}
+}
+
+function showPreview(event){
+	if(event.target.files.length > 0){
+		var src = URL.createObjectURL(event.target.files[0]);
+		var preview = document.getElementById("image-preview");
+		preview.src = src;
+	}
 }
 
 function Cognome(){
@@ -20,7 +44,8 @@ function Cognome(){
 
 	if (value == null || value == ("")) {
 		return 'Cognome';
-	}else{
+	}
+	else {
 		return "";
 	}
 }
@@ -30,7 +55,8 @@ function Indirizzo(){
 
 	if (value == null || value == ("")) {
 		return 'Indirizzo';
-	}else{
+	}
+	else {
 		return "";
 	}
 }
@@ -40,7 +66,8 @@ function Nome(){
 	
 	if (value == null || value == ("")) {
 		return 'Nome';
-	}else{
+	}
+	else {
 		return "";
 	}
 
@@ -52,7 +79,8 @@ function Cellulare(){
 
 	if (!re.exec(value)) {
 		return 'Cellulare';
-	}else{
+	}
+	else {
 		return "";
 	}
 
@@ -64,7 +92,8 @@ function Mail(){
 
 	if (!re.exec(value)) {
 		return 'E-mail';
-	}else{
+	}
+	else {
 		return "";
 	}
 }
@@ -87,7 +116,8 @@ function Calendar(){
 
 	if(value == ""){
 		return "Calendario"
-	}else{
+	}
+	else {
 		return ""
 	}
 }
@@ -123,7 +153,8 @@ function checkFirstData(){
 
 	if(message.length != 0){
 	alert(message.join('\n'))
-	}else{	
+	}
+	else {	
 		openTab(event, 'Second')
 	}
 }
@@ -152,6 +183,6 @@ function checkSecondData(){
 	}
 
 	if(message.length != 0){
-	return true;
+		return true;
 	}
 }
