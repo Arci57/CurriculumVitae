@@ -1,7 +1,7 @@
 var value;
 var re;
 
-function openTab(evt, tabName) {
+function changeTab(evt, tabName) {
 	var i, tabcontent, tablinks;
 	var tabSelect;
 
@@ -14,6 +14,7 @@ function openTab(evt, tabName) {
 	tablinks = document.getElementsByClassName("tablinks");
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].style.background = "#eee";
+		tablinks[i].style.color = "#000";
 	}
 
 	if (tabName === "First") {
@@ -28,6 +29,7 @@ function openTab(evt, tabName) {
 
 	for (i = 0; i < tabSelect; i++) {
 		tablinks[i].style.background = "#4caf50";
+		tablinks[i].style.color = "#fff";
 	}
 }
 
@@ -155,7 +157,7 @@ function checkFirstData(){
 	alert(message.join('\n'))
 	}
 	else {	
-		openTab(event, 'Second')
+		changeTab(event, 'Second')
 	}
 }
 

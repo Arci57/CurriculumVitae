@@ -27,7 +27,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 	</head>
-	<body onload="openTab(event, 'First')">
+	<body onload="changeTab(event, 'First')">
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<div class="tab center">
@@ -127,7 +127,7 @@
 					</div>
 					<div class="row">
 						<div class="column-single">
-							<button class="button right" onclick="openTab(event, 'Second')">Prossimo</button>
+							<button class="button right" onclick="changeTab(event, 'Second')">Prossimo</button>
 						</div>
 					</div>
 				</div>
@@ -152,8 +152,8 @@
 					</div>
 					<div class="row">
 						<div class="column-single">
-							<button class="button left" onclick="openTab(event, 'First')">Precendente</button>
-							<button class="button right" onclick="openTab(event, 'Third')">Prossimo</button>
+							<button class="button back left" onclick="changeTab(event, 'First')">Precendente</button>
+							<button class="button right" onclick="changeTab(event, 'Third')">Prossimo</button>
 						</div>
 					</div>
 				</div>
@@ -170,7 +170,7 @@
 					</div>
 					<div class="row">
 						<div class="column-single">
-							<button class="button left" onclick="openTab(event, 'Second')">Precendente</button>
+							<button class="button back left" onclick="changeTab(event, 'Second')">Precendente</button>
 							<input class="button right" type="submit" onclick="checkData()">
 						</div>
 					</div>
