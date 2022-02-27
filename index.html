@@ -20,7 +20,6 @@
 
 		<!-- JS -->
 		<script defer src="js/main.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
 		<!-- Roboto -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +31,7 @@
 		<div class="form">
 			<div class="tab center">
 				<label class="tablinks">Dati anagrafici</label>
-				<label class="tablinks">Titoli vari</label>
+				<label class="tablinks">Informazioni varie</label>
 				<label class="tablinks">Immagine</label>
 			</div>
 
@@ -92,19 +91,27 @@
 								<option>Aosta</option>
 								<option>Bari</option>
 								<option>Bologna</option>
+								<option>Bolzano</option>
 								<option>Brescia</option>
 								<option>Cagliari</option>
 								<option>Campobasso</option>
 								<option>Catania</option>
+								<option>Catanzaro</option>
 								<option>Firenze</option>
-								<option>Genova</option>
 								<option>Foggia</option>
+								<option>Genova</option>
+								<option>Lecce</option>
 								<option>Matera</option>
+								<option>Messina</option>
 								<option>Milano</option>
 								<option>Napoli</option>
+								<option>Novara</option>
 								<option>Palermo</option>
 								<option>Perugia</option>
+								<option>Pescara</option>
 								<option>Pisa</option>
+								<option>Potenza</option>
+								<option>Reggio Calabria</option>
 								<option>Rieti</option>
 								<option>Rimini</option>
 								<option>Roma</option>
@@ -113,6 +120,7 @@
 								<option>Torino</option>
 								<option>Trento</option>
 								<option>Trieste</option>
+								<option>Udine</option>
 								<option>Venezia</option>
 								<option>Verona</option>
 							</select>
@@ -150,6 +158,61 @@
 							</select>
 						</div>
 					</div>
+					<div class="row">
+						<div class="column">
+							<label for="patente">Patente:</label>
+							<select class="select" name="patente" id="patente">
+								<option>Seleziona</option>
+								<option>AM</option>
+								<option>A1</option>
+								<option>A2</option>
+								<option>A</option>
+								<option>B</option>
+							</select>
+						</div>
+						<div class="column">
+							<label for="hobbies">Hobbies:</label>
+							<input class="textfield" name="hobbies" id="hobbies">
+						</div>
+					</div>
+					<div>
+						<div class="row">
+							<label class="center">Lingue parlate</label>
+							<div class="column-single center">
+								<input type="checkbox" id="italian" name="italian">
+								<input type="checkbox" id="english" name="english">
+								<input type="checkbox" id="spanish" name="spanish">
+								<input type="checkbox" id="french" name="french">
+								<input type="checkbox" id="german" name="german">
+
+								<label class="checkboxLabel" for="italian">Italiano</label>
+								<label class="checkboxLabel" for="english">Inglese</label>
+								<label class="checkboxLabel" for="spanish">Spagnolo</label>
+								<label class="checkboxLabel" for="french">Francese</label>
+								<label class="checkboxLabel" for="german">Tedesco</label>
+							</div>
+							<div class="column-single center">
+								<input type="checkbox" id="chinese" name="chinese">
+								<input type="checkbox" id="japanese" name="japanese">
+								<input type="checkbox" id="russian" name="russian">
+								<input type="checkbox" id="dutch" name="dutch">
+								<input type="checkbox" id="arabian" name="arabian">
+
+								<label class="checkboxLabel" for="chinese">Cinese</label>
+								<label class="checkboxLabel" for="japanese">Giapponese</label>
+								<label class="checkboxLabel" for="russian">Russo</label>
+								<label class="checkboxLabel" for="dutch">Olandese</label>
+								<label class="checkboxLabel" for="arabian">Arabo</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="column-single">
+							<label for="esperienza">Esperienza lavorativa:</label>
+							<textarea class="textfield" name="esperienza" id="esperienza"></textarea>
+						</div>
+					</div>
+
 					<div class="row">
 						<div class="column-single">
 							<button class="button back left" onclick="changeTab(event, 'First')">Precendente</button>

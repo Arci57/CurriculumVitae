@@ -148,3 +148,59 @@ img {
 #ImageLabel:hover {
 	background: #357A38;
 }
+
+textarea {
+	resize: vertical;
+	min-height: 150px;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+.checkboxLabel {
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	text-align: center;
+	background:#DDDDDD;
+	border-radius: 8px;
+	transition: 0.1s;
+	font-size: 15px;
+}
+
+.checkboxLabel:hover {
+	background:#AAAAAA;
+}
+  
+#italian:checked ~ label[for="italian"],
+#english:checked ~ label[for="english"],
+#spanish:checked ~ label[for="spanish"],
+#french:checked ~ label[for="french"],
+#german:checked ~ label[for="german"],
+#chinese:checked ~ label[for="chinese"],
+#japanese:checked ~ label[for="japanese"],
+#russian:checked ~ label[for="russian"],
+#dutch:checked ~ label[for="dutch"],
+#arabian:checked ~ label[for="arabian"]
+{
+	background: #4CAF50;
+	color: #ffffff;
+}
+
+#italian:checked ~ label[for="italian"]:hover,
+#english:checked ~ label[for="english"]:hover,
+#spanish:checked ~ label[for="spanish"]:hover,
+#french:checked ~ label[for="french"]:hover,
+#german:checked ~ label[for="german"]:hover,
+#chinese:checked ~ label[for="chinese"]:hover,
+#japanese:checked ~ label[for="japanese"]:hover,
+#russian:checked ~ label[for="russian"]:hover,
+#dutch:checked ~ label[for="dutch"]:hover,
+#arabian:checked ~ label[for="arabian"]:hover
+{
+	background: #357A38;
+	color: #ffffff;
+}
