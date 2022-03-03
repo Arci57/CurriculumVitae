@@ -155,7 +155,7 @@ textarea {
 	min-height: 150px;
 }
 
-input[type="checkbox"] {
+.checkbox {
 	display: none;
 }
 
@@ -185,8 +185,7 @@ input[type="checkbox"] {
 #japanese:checked ~ label[for="japanese"],
 #russian:checked ~ label[for="russian"],
 #dutch:checked ~ label[for="dutch"],
-#arabian:checked ~ label[for="arabian"]
-{
+#arabian:checked ~ label[for="arabian"] {
 	background: #4CAF50;
 	color: #ffffff;
 }
@@ -200,8 +199,7 @@ input[type="checkbox"] {
 #japanese:checked ~ label[for="japanese"]:hover,
 #russian:checked ~ label[for="russian"]:hover,
 #dutch:checked ~ label[for="dutch"]:hover,
-#arabian:checked ~ label[for="arabian"]:hover
-{
+#arabian:checked ~ label[for="arabian"]:hover {
 	background: #357A38;
 	color: #ffffff;
 }

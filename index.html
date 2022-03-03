@@ -26,7 +26,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 	</head>
-	<body onload="changeTab(event, 'First')">
+	<body onload="changeTab(event, 'Second')">
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<div class="tab center">
@@ -86,6 +86,7 @@
 						<div class="column">
 							<label for="citta">Città*</label>
 							<select class="select" name="citta" id="citta">
+								<option>Seleziona</option>
 								<option>Ancona</option>
 								<option>Aosta</option>
 								<option>Bari</option>
@@ -144,6 +145,7 @@
 						<div class="column">
 							<label for="titolostudio">Titolo di studio*</label>
 							<select class="select" name="titolostudio" id="titolostudio">
+								<option>Seleziona</option>
 								<option>Assente</option>
 								<option>Diploma Terza media</option>
 								<option>Diploma Istituto Superiore</option>
@@ -160,6 +162,7 @@
 						<div class="column">
 							<label for="patente">Patente*</label>
 							<select class="select" name="patente" id="patente">
+								<option>Seleziona</option>
 								<option>Nessuna</option>
 								<option>AM</option>
 								<option>A1</option>
@@ -177,11 +180,11 @@
 						<div class="row">
 							<label class="center" id="lingua">Lingue parlate*</label>
 							<div class="column-single center">
-								<input type="checkbox" id="italian" name="italian" disabled="disabled">
-								<input type="checkbox" id="english" name="english">
-								<input type="checkbox" id="spanish" name="spanish">
-								<input type="checkbox" id="french" name="french">
-								<input type="checkbox" id="german" name="german">
+								<input class="checkbox" type="checkbox" id="italian" name="italian">
+								<input class="checkbox" type="checkbox" id="english" name="english">
+								<input class="checkbox" type="checkbox" id="spanish" name="spanish">
+								<input class="checkbox" type="checkbox" id="french" name="french">
+								<input class="checkbox" type="checkbox" id="german" name="german">
 
 								<label class="checkboxLabel" for="italian">Italiano</label>
 								<label class="checkboxLabel" for="english">Inglese</label>
@@ -190,11 +193,11 @@
 								<label class="checkboxLabel" for="german">Tedesco</label>
 							</div>
 							<div class="column-single center">
-								<input type="checkbox" id="chinese" name="chinese">
-								<input type="checkbox" id="japanese" name="japanese">
-								<input type="checkbox" id="russian" name="russian">
-								<input type="checkbox" id="dutch" name="dutch">
-								<input type="checkbox" id="arabian" name="arabian">
+								<input class="checkbox" type="checkbox" id="chinese" name="chinese">
+								<input class="checkbox" type="checkbox" id="japanese" name="japanese">
+								<input class="checkbox" type="checkbox" id="russian" name="russian">
+								<input class="checkbox" type="checkbox" id="dutch" name="dutch">
+								<input class="checkbox" type="checkbox" id="arabian" name="arabian">
 
 								<label class="checkboxLabel" for="chinese">Cinese</label>
 								<label class="checkboxLabel" for="japanese">Giapponese</label>

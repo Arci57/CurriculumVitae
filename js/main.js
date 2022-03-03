@@ -43,88 +43,145 @@ function showPreview(event){
 }
 
 function Cognome(){
-	value = document.getElementById("cognome").value
+	cognome = document.getElementById("cognome");
 
-	if (value == null || value == ("")) {
+	if (cognome.value == null || cognome.value == ("")) {
+		cognome.style.borderColor = "#F44336";
 		return 'Cognome';
 	}
 	else {
+		cognome.style.borderColor = "#AAAAAA";
 		return "";
 	}
 }
 
 function Indirizzo(){
-	value = document.getElementById("indirizzo").value
+	indirizzo = document.getElementById("indirizzo");
 
-	if (value == null || value == ("")) {
+	if (indirizzo.value == null || indirizzo.value == ("")) {
+		indirizzo.style.borderColor = "#F44336";
 		return 'Indirizzo';
 	}
 	else {
+		indirizzo.style.borderColor = "#AAAAAA";
+		return "";
+	}
+}
+
+function Citta(){
+	citta = document.getElementById("citta");
+
+	if (citta.value == "Seleziona") {
+		citta.style.borderColor = "#F44336";
+		return 'Città';
+	}
+	else {
+		citta.style.borderColor = "#AAAAAA";
 		return "";
 	}
 }
 
 function Nome(){
-	value = document.getElementById("nome").value
+	value = document.getElementById("nome").value;
 	
-	if (value == null || value == ("")) {
+	if (nome.value == null || nome.value == ("")) {
+		nome.style.borderColor = "#F44336";
 		return 'Nome';
 	}
 	else {
+		nome.style.borderColor = "#AAAAAA";
 		return "";
 	}
-
 }
 
 function Cellulare(){
-	value = document.getElementById("cell").value
-	re = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/
+	cellulare = document.getElementById("cell");
+	re = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
-	if (!re.exec(value)) {
+	if (!re.exec(cellulare.value)) {
+		cellulare.style.borderColor = "#F44336";
 		return 'Cellulare';
 	}
 	else {
+		cellulare.style.borderColor = "#AAAAAA";
 		return "";
 	}
-
 }
 
 function Mail(){
-	value = document.getElementById("email").value
-	re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+	email = document.getElementById("email");
+	re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
-	if (!re.exec(value)) {
+	if (!re.exec(email.value)) {
+		email.style.borderColor = "#F44336";
 		return 'E-mail';
 	}
 	else {
+		email.style.borderColor = "#AAAAAA";
 		return "";
 	}
 }
 
 function Cap(){
-	value = document.getElementById("cap").value
+	cap = document.getElementById("cap");
 	re = /^[0-9]{5}$/
 
-	if (!re.exec(value)) {
+	if (!re.exec(cap.value)) {
+		cap.style.borderColor = "#F44336";
 		return 'Cap';
-	}else{
+	}
+	else {
+		cap.style.borderColor = "#AAAAAA";
 		return "";
 	}
-
 }
 
 function Calendar(){
-	value = document.getElementById("datanascita").value
+	calendar = document.getElementById("datanascita");
 
-
-	if(value == ""){
+	if(calendar.value == ""){
+		calendar.style.borderColor = "#F44336";
 		return "Calendario"
 	}
 	else {
+		calendar.style.borderColor = "#AAAAAA";
 		return ""
 	}
 }
 
+function Titolostudio(){
+	titolostudio = document.getElementById("titolostudio");
+
+	if (titolostudio.value == "Seleziona") {
+		titolostudio.style.borderColor = "#F44336";
+		return 'Titolo di studio';
+	}
+	else {
+		titolostudio.style.borderColor = "#AAAAAA";
+		return "";
+	}
+}
+
+function Patente(){
+	patente = document.getElementById("patente");
+
+	if (patente.value == "Seleziona") {
+		patente.style.borderColor = "#F44336";
+		return 'Patente';
+	}
+	else {
+		patente.style.borderColor = "#AAAAAA";
+		return "";
+	}
+}
+
+function Lingue () {
+	languages = document.getElementsByClassName("checkbox");
+
+	var checked = document.querySelector("languages[0]:checked") != null;
+	console.log(checked);
+	return 'Lingue';
+}
 
 function checkFirstData(){
 
@@ -142,6 +199,9 @@ function checkFirstData(){
 	if(Cap() != ""){
 		message.push(er + Cap())
 	}
+	if(Citta() != ""){
+		message.push(er + Citta())
+	}
 	if(Indirizzo() != ""){
 		message.push(er + Indirizzo())
 	}
@@ -153,16 +213,31 @@ function checkFirstData(){
 	}
 
 	if(message.length != 0){
-	alert(message.join('\n'))
+		console.log(message.join('\n'))
+		message = [];
 	}
 	else {	
 		changeTab(event, 'Second')
-		document.getElementById("italian").checked="true";
 	}
 }
 
 function checkSecondData(){
 
+	var er = "Problema nel: "
+
+	if(Titolostudio() != ""){
+		message.push(er + Titolostudio())
+	}
+	if(Patente() != ""){
+		message.push(er + Patente())
+	}
+
+	if(message.length != 0){
+		console.log(message.join('\n'))
+		message = [];
+	}
+	else {
 		changeTab(event, 'Third')
+	}
 	
 }
