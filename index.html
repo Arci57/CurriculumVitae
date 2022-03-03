@@ -6,7 +6,6 @@
 		<meta name="description" content="Utilizzando questo sito creerai un Curriculum vitae">
 		<meta name="keywords" content="curriculum vitae cv">
 		<meta name="author" content="Arcidiacono - Pecilli">
-		<meta http-equiv="Content-Type" content="text/html; iso-8859-1">
 		<meta name="robots" content="INDEX,FOLLOW">
 		<meta name="creation_Date" content="01/31/2022">
 		<meta name="revisit-after" content="60 days">
@@ -35,7 +34,7 @@
 				<label class="tablinks">Immagine</label>
 			</div>
 
-			<form name="CV" method="POST" id="form-print">
+			<form name="CV" method="POST" action="mailto:info@pisiu.tech">
 				<div id="First" class="tabcontent">
 					<div class="row">
 						<div class="column">
@@ -130,7 +129,7 @@
 					<div class="row">
 						<div class="column-single">
 							<label for="datanascita">Data di nascita*</label>
-							<input class="textfield" type="date" name="datanascita" id="datanascita" placeholder="Data di nascita" required="">
+							<input class="textfield" type="date" name="datanascita" id="datanascita" required="">
 						</div>
 					</div>
 					<div class="row">
@@ -154,7 +153,7 @@
 							</select>
 						</div>
 						<div class="column">
-							<label for="professione">Professione</label>
+							<label for="professione">Professione*</label>
 							<input class="textfield" name="professione" id="professione">
 						</div>
 					</div>
@@ -226,7 +225,7 @@
 					<div class="row">
 						<div class="column-single">
 							<div class="center">
-								<img id="image-preview" src="img/avatar.png">
+								<img id="image-preview" alt="Avatar" src="img/avatar.png">
 							</div>
 							<label id="ImageLabel" for="ImageInputBtn">Carica una tua foto</label>
 							<input type="file" id="ImageInputBtn" accept="image/*" onchange="showPreview(event);">

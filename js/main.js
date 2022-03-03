@@ -34,67 +34,59 @@ function changeTab(evt, tabName) {
 	}
 }
 
-function showPreview(event){
-	if(event.target.files.length > 0){
+function showPreview(event) {
+	if (event.target.files.length > 0){
 		var src = URL.createObjectURL(event.target.files[0]);
 		var preview = document.getElementById("image-preview");
 		preview.src = src;
 	}
 }
 
-function Cognome(){
+function Cognome() {
 	cognome = document.getElementById("cognome");
 
 	if (cognome.value == null || cognome.value == ("")) {
 		cognome.style.borderColor = "#F44336";
 		return 'Cognome';
 	}
-	else {
-		cognome.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	cognome.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Indirizzo(){
+function Indirizzo() {
 	indirizzo = document.getElementById("indirizzo");
 
 	if (indirizzo.value == null || indirizzo.value == ("")) {
 		indirizzo.style.borderColor = "#F44336";
 		return 'Indirizzo';
 	}
-	else {
-		indirizzo.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	indirizzo.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Citta(){
+function Citta() {
 	citta = document.getElementById("citta");
 
 	if (citta.value == "Seleziona") {
 		citta.style.borderColor = "#F44336";
 		return 'Città';
 	}
-	else {
-		citta.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	citta.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Nome(){
+function Nome() {
 	value = document.getElementById("nome").value;
 	
 	if (nome.value == null || nome.value == ("")) {
 		nome.style.borderColor = "#F44336";
 		return 'Nome';
 	}
-	else {
-		nome.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	nome.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Cellulare(){
+function Cellulare() {
 	cellulare = document.getElementById("cell");
 	re = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
 
@@ -102,13 +94,11 @@ function Cellulare(){
 		cellulare.style.borderColor = "#F44336";
 		return 'Cellulare';
 	}
-	else {
-		cellulare.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	cellulare.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Mail(){
+function Mail() {
 	email = document.getElementById("email");
 	re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
@@ -116,70 +106,78 @@ function Mail(){
 		email.style.borderColor = "#F44336";
 		return 'E-mail';
 	}
-	else {
-		email.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	email.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Cap(){
+function Cap() {
 	cap = document.getElementById("cap");
 	re = /^[0-9]{5}$/
 
 	if (!re.exec(cap.value)) {
-		cap.style.borderColor = "#F44336";
+		cap.style.borderColor = "#F44337";
 		return 'Cap';
 	}
-	else {
-		cap.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	cap.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Calendar(){
+function Calendar() {
 	calendar = document.getElementById("datanascita");
 
 	if(calendar.value == ""){
 		calendar.style.borderColor = "#F44336";
 		return "Calendario"
 	}
-	else {
-		calendar.style.borderColor = "#AAAAAA";
-		return ""
-	}
+	calendar.style.borderColor = "#AAAAAA";
+	return ""
 }
 
-function Titolostudio(){
+function Titolostudio() {
 	titolostudio = document.getElementById("titolostudio");
 
 	if (titolostudio.value == "Seleziona") {
 		titolostudio.style.borderColor = "#F44336";
 		return 'Titolo di studio';
 	}
-	else {
-		titolostudio.style.borderColor = "#AAAAAA";
-		return "";
-	}
+	titolostudio.style.borderColor = "#AAAAAA";
+	return "";
 }
 
-function Patente(){
+function Patente() {
 	patente = document.getElementById("patente");
 
 	if (patente.value == "Seleziona") {
 		patente.style.borderColor = "#F44336";
 		return 'Patente';
 	}
-	else {
-		patente.style.borderColor = "#AAAAAA";
-		return "";
+	patente.style.borderColor = "#AAAAAA";
+	return "";
+}
+
+function Professione() {
+	professione = document.getElementById("professione");
+
+	if (professione.value == null || professione.value == ("")) {
+		professione.style.borderColor = "#F44336";
+		return 'Nome';
 	}
+	professione.style.borderColor = "#AAAAAA";
+	return "";
 }
 
 function Lingue () {
 	languages = document.getElementsByClassName("checkbox");
+	languagesLabel = document.getElementById("lingua");
 
-	var checked = document.querySelector("languages[0]:checked") != null;
-	console.log(checked);
+	for (var i = 0; i < languages.length; i++) {
+		if (languages[i].checked == true) {
+			languagesLabel.style.color = "#000000";
+			return "";
+		}
+	}
+
+	languagesLabel.style.color = "#F44336";
 	return 'Lingue';
 }
 
@@ -231,8 +229,14 @@ function checkSecondData(){
 	if(Patente() != ""){
 		message.push(er + Patente())
 	}
+	if(Professione() != ""){
+		message.push(er + Professione())
+	}
+	if(Lingue() != ""){
+		message.push(er + Lingue())
+	}
 
-	if(message.length != 0){
+	if(message.length != 0) {
 		console.log(message.join('\n'))
 		message = [];
 	}
