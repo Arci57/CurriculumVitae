@@ -175,7 +175,7 @@ textarea {
 .checkboxLabel:hover {
 	background:#AAAAAA;
 }
-  
+
 #italian:checked ~ label[for="italian"],
 #english:checked ~ label[for="english"],
 #spanish:checked ~ label[for="spanish"],
