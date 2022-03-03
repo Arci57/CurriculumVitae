@@ -1,5 +1,6 @@
 var value;
 var re;
+let message = []
 
 function changeTab(evt, tabName) {
 	var i, tabcontent, tablinks;
@@ -127,8 +128,6 @@ function Calendar(){
 
 function checkFirstData(){
 
-	let message = []
-
 	var er = "Problema nel: "
 
 	if(Nome() != ""){
@@ -158,33 +157,12 @@ function checkFirstData(){
 	}
 	else {	
 		changeTab(event, 'Second')
+		document.getElementById("italian").checked="true";
 	}
 }
 
-
 function checkSecondData(){
 
-	let message = []
-
-	var er = "Problema nel: "
-
-	if(Nome() != ""){
-		message.push(er + Nome())
-	}
-	if(Cognome() != ""){
-		message.push(er + Cognome())
-	}
-	if(Cellulare() != ""){
-		message.push(er + Cellulare())
-	}
-	if(Cap() != ""){
-		message.push(er + Cap())
-	}
-	if(Indirizzo() != ""){
-		message.push(er + Indirizzo())
-	}
-
-	if(message.length != 0){
-		return true;
-	}
+		changeTab(event, 'Third')
+	
 }
