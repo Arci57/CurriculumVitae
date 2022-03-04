@@ -2,6 +2,10 @@ var value;
 var re;
 let message = []
 
+function loadPage() {
+	changeTab(event, "Second")
+}
+
 function changeTab(evt, tabName) {
 	var i, tabcontent, tablinks;
 	var tabSelect;
@@ -69,9 +73,20 @@ function Citta() {
 
 	if (citta.value == "Seleziona") {
 		citta.style.borderColor = "#F44336";
-		return 'Città';
+		return 'Città di residenza';
 	}
 	citta.style.borderColor = "#AAAAAA";
+	return "";
+}
+
+function CittaNascita() {
+	cittanascita = document.getElementById("cittanascita");
+
+	if (cittanascita.value == "Seleziona") {
+		cittanascita.style.borderColor = "#F44336";
+		return 'Città di nascita';
+	}
+	cittanascita.style.borderColor = "#AAAAAA";
 	return "";
 }
 
@@ -199,6 +214,9 @@ function checkFirstData(){
 	}
 	if(Citta() != ""){
 		message.push(er + Citta())
+	}
+	if(CittaNascita() != ""){
+		message.push(er + CittaNascita())
 	}
 	if(Indirizzo() != ""){
 		message.push(er + Indirizzo())

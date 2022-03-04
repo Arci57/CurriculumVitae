@@ -25,7 +25,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
 	</head>
-	<body onload="changeTab(event, 'First')">
+	<body onload="loadPage()">
 		<h1 class="title">Curriculum Vitae</h1>
 		<div class="form">
 			<div class="tab center">
@@ -34,27 +34,27 @@
 				<label class="tablinks">Immagine</label>
 			</div>
 
-			<form name="CV" method="POST" action="mailto:info@pisiu.tech">
+			<form name="CV" method="POST" action="mailto:info@arci.me">
 				<div id="First" class="tabcontent">
 					<div class="row">
 						<div class="column">
 							<label for="nome">Nome*</label>
-							<input class="textfield" type="text" name="nome" id="nome" placeholder="Nome" required="">
+							<input class="textfield" type="text" name="nome" id="nome" placeholder="Es. Mario" required="">
 						</div>
 						<div class="column">
 							<label for="cognome">Cognome*</label>
-							<input class="textfield" type="text" name="cognome" id="cognome" placeholder="Cognome" required="">
+							<input class="textfield" type="text" name="cognome" id="cognome" placeholder="Es. Clima" required="">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="column">
 							<label for="email">E-Mail*</label>
-							<input class="textfield" type="email" name="email" id='email' placeholder="E-Mail" required="">
+							<input class="textfield" type="text" name="email" id='email' placeholder="Es. marioclima@example.org" required="">
 						</div>
 						<div class="column">
 							<label for="cell">Cellulare*</label>
-							<input class="textfield" type="text" name="cell" id='cell' placeholder="cell" required="">
+							<input class="textfield" type="text" name="cell" id='cell' placeholder="Es. +39 312 456 7890" required="">
 						</div>
 					</div>
 
@@ -73,17 +73,17 @@
 					<div class="row">
 						<div class="column-single">
 							<label for="indirizzo">Indirizzo*</label>
-							<input class="textfield" type="text" name="indirizzo" id="indirizzo" placeholder="Indirizzo" required="">
+							<input class="textfield" type="text" name="indirizzo" id="indirizzo" placeholder="Es. Via Roma, 5" required="">
 						</div>
 					</div>
 
 					<div class="row">
 						<div class="column">
 							<label for="cap">CAP*</label>
-							<input class="textfield" type="text" name="cap" id="cap" required="" placeholder="Cap">
+							<input class="textfield" type="text" name="cap" id="cap" required="" placeholder="Es. 00100">
 						</div>
 						<div class="column">
-							<label for="citta">Città*</label>
+							<label for="citta">Città di residenza*</label>
 							<select class="select" name="citta" id="citta">
 								<option>Seleziona</option>
 								<option>Ancona</option>
@@ -127,9 +127,51 @@
 					</div>
 
 					<div class="row">
-						<div class="column-single">
+						<div class="column">
 							<label for="datanascita">Data di nascita*</label>
 							<input class="textfield" type="date" name="datanascita" id="datanascita" required="">
+						</div>
+						<div class="column">
+							<label for="cittanascita">Città di nascita*</label>
+							<select class="select" name="cittanascita" id="cittanascita">
+								<option>Seleziona</option>
+								<option>Ancona</option>
+								<option>Aosta</option>
+								<option>Bari</option>
+								<option>Bologna</option>
+								<option>Bolzano</option>
+								<option>Brescia</option>
+								<option>Cagliari</option>
+								<option>Campobasso</option>
+								<option>Catania</option>
+								<option>Catanzaro</option>
+								<option>Firenze</option>
+								<option>Foggia</option>
+								<option>Genova</option>
+								<option>Lecce</option>
+								<option>Matera</option>
+								<option>Messina</option>
+								<option>Milano</option>
+								<option>Napoli</option>
+								<option>Novara</option>
+								<option>Palermo</option>
+								<option>Perugia</option>
+								<option>Pescara</option>
+								<option>Pisa</option>
+								<option>Potenza</option>
+								<option>Reggio Calabria</option>
+								<option>Rieti</option>
+								<option>Rimini</option>
+								<option>Roma</option>
+								<option>Salerno</option>
+								<option>Sassari</option>
+								<option>Torino</option>
+								<option>Trento</option>
+								<option>Trieste</option>
+								<option>Udine</option>
+								<option>Venezia</option>
+								<option>Verona</option>
+							</select>
 						</div>
 					</div>
 					<div class="row">
@@ -154,7 +196,7 @@
 						</div>
 						<div class="column">
 							<label for="professione">Professione*</label>
-							<input class="textfield" name="professione" id="professione">
+							<input class="textfield" name="professione" id="professione" placeholder="Es. Agricoltore/Meccanico/Nessuna">
 						</div>
 					</div>
 					<div class="row">
@@ -172,12 +214,12 @@
 						</div>
 						<div class="column">
 							<label for="hobbies">Hobbies</label>
-							<input class="textfield" name="hobbies" id="hobbies">
+							<input class="textfield" name="hobbies" id="hobbies" placeholder="Es. DIY, Collezionismo, Modellismo">
 						</div>
 					</div>
 					<div>
 						<div class="row">
-							<label class="center" id="lingua">Lingue parlate*</label>
+							<label class="center" id="lingua">Lingue conosciute (almeno B1)*</label>
 							<div class="column-single center">
 								<input class="checkbox" type="checkbox" id="italian" name="italian">
 								<input class="checkbox" type="checkbox" id="english" name="english">
@@ -209,7 +251,7 @@
 					<div class="row">
 						<div class="column-single">
 							<label for="esperienza">Esperienza lavorativa</label>
-							<textarea class="textfield" name="esperienza" id="esperienza"></textarea>
+							<textarea class="textfield" name="esperienza" id="esperienza" placeholder="Descrivi brevemente la tua esperienza lavorativa"></textarea>
 						</div>
 					</div>
 
