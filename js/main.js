@@ -3,7 +3,7 @@ var re;
 let message = []
 
 function loadPage() {
-	changeTab(event, "Second")
+	changeTab(event, "First")
 }
 
 function changeTab(evt, tabName) {
