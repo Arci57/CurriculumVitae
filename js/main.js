@@ -261,5 +261,4 @@ function checkSecondData(){
 	else {
 		changeTab(event, 'Third')
 	}
-	
 }
